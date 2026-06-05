@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>บทความ Vignelli Canon | VIGNELLI EXPO</title>
+    <meta name="title-en" content="Vignelli Canon Articles | VIGNELLI EXPO">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,17 +45,23 @@
             </a>
 
             <nav class="hidden md:flex items-center space-x-8 font-semibold text-sm tracking-tight">
-                <a href="index.html#canon" class="hover:text-[#FF3300] transition">หลักการออกแบบ</a>
-                <a href="index.html#map-section" class="hover:text-[#FF3300] transition">แผนที่รถไฟใต้ดิน</a>
-                <a href="index.html#font-playground" class="hover:text-[#FF3300] transition">ทดลองสลับฟอนต์</a>
-                <a href="index.html#poster-creator" class="hover:text-[#FF3300] transition">ออกแบบโปสเตอร์</a>
-                <a href="articles.html" class="text-[#FF3300]">บทความ</a>
+                <a href="index.html#canon" class="hover:text-[#FF3300] transition" data-en="Design Principles">หลักการออกแบบ</a>
+                <a href="index.html#map-section" class="hover:text-[#FF3300] transition" data-en="Subway Map">แผนที่รถไฟใต้ดิน</a>
+                <a href="index.html#font-playground" class="hover:text-[#FF3300] transition" data-en="Font Playground">ทดลองสลับฟอนต์</a>
+                <a href="index.html#poster-creator" class="hover:text-[#FF3300] transition" data-en="Poster Creator">ออกแบบโปสเตอร์</a>
+                <a href="articles.html" class="text-[#FF3300]" data-en="Articles">บทความ</a>
             </nav>
 
-            <a href="index.html" class="bg-[#111111] text-white hover:bg-[#FF3300] text-xs font-bold uppercase tracking-wider py-2 px-4 border-2 border-black flex items-center gap-2 transition duration-200">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>กลับหน้าแรก</span>
-            </a>
+            <div class="flex items-center space-x-2">
+                <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-white text-black hover:bg-[#FF3300] hover:text-white text-xs font-bold uppercase tracking-wider py-2 px-3 border-2 border-black flex items-center gap-2 transition duration-200" aria-label="Toggle language">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langLabel">EN</span>
+                </button>
+                <a href="index.html" class="bg-[#111111] text-white hover:bg-[#FF3300] text-xs font-bold uppercase tracking-wider py-2 px-4 border-2 border-black flex items-center gap-2 transition duration-200">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span data-en="Back to Home">กลับหน้าแรก</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -63,12 +70,12 @@
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
                 <div class="lg:col-span-8">
                     <span class="text-sm font-bold uppercase tracking-widest text-[#FF3300] mb-3 block">ARTICLE PAGE</span>
-                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight leading-none">
+                    <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight leading-none" data-en="Articles<br><span class='text-[#FF3300]'>VIGNELLI CANON</span>">
                         บทความ<br><span class="text-[#FF3300]">VIGNELLI CANON</span>
                     </h1>
                 </div>
                 <div class="lg:col-span-4 border-4 border-black bg-white p-5 vignelli-shadow-red">
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="text-gray-700 leading-relaxed" data-en="Read Massimo Vignelli's design philosophy as essays — bridging history to today's digital practice.">
                         อ่านแนวคิดการออกแบบของ Massimo Vignelli แบบเป็นบทความ เพื่อเชื่อมจากประวัติศาสตร์สู่การใช้งานจริงในงานดิจิทัลวันนี้
                     </p>
                 </div>
@@ -94,33 +101,33 @@
                             <span class="text-xs font-mono uppercase text-[#FF3300]">Article 01 / Typography</span>
                             <span class="text-xs font-mono uppercase">Reading time: 4 min</span>
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight leading-none mb-5">
+                        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight leading-none mb-5" data-en="Why Vignelli Believed “Few Fonts” Make Design More Powerful">
                             ทำไม Vignelli จึงเชื่อว่า “ฟอนต์น้อย” ทำให้งานออกแบบทรงพลังขึ้น
                         </h2>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-gray-700 leading-relaxed mb-4" data-en="For Vignelli, type was never decoration — it was a communication tool. Picking only a handful of families gave designers tighter control over tone, clarity, and information hierarchy than using a wide range of unrelated typefaces ever could.">
                             สำหรับ Vignelli ฟอนต์ไม่ใช่ของตกแต่ง แต่เป็นเครื่องมือสื่อสาร เขาเชื่อว่าการเลือกฟอนต์เพียงไม่กี่ตระกูลช่วยให้ดีไซเนอร์ควบคุมน้ำเสียง ความชัดเจน และลำดับชั้นของข้อมูลได้ดีกว่าการใช้ฟอนต์จำนวนมากโดยไม่มีระบบ
                         </p>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed" data-en="This discipline doesn't restrict creativity — it forces sharper decisions: what is the core message, what deserves emphasis, and what should be cut. With only the essential remaining, viewers can read, understand, and remember the work far more easily.">
                             หลักคิดนี้ไม่ได้จำกัดความคิดสร้างสรรค์ แต่บังคับให้เราตัดสินใจอย่างแม่นยำขึ้น: อะไรคือแก่นของสาร อะไรควรถูกเน้น และอะไรควรถูกลดทอน เมื่องานออกแบบเหลือเฉพาะสิ่งจำเป็น ผู้ชมจึงอ่าน เข้าใจ และจดจำได้ง่ายกว่าเดิม
                         </p>
                     </article>
 
                     <article id="grid-system" class="border-4 border-black bg-[#F9F9F6] p-6 md:p-8">
                         <span class="text-xs font-mono uppercase text-[#FF3300]">Article 02 / Structure</span>
-                        <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tight mt-3 mb-4">
+                        <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tight mt-3 mb-4" data-en="Grid System: The Structure That Makes Simplicity Powerful">
                             Grid System: โครงสร้างที่ทำให้ความเรียบง่ายมีพลัง
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed" data-en="A grid is not a cage but a shared language — one that lets every element relate to every other with reason. When text, shape, and whitespace all follow the same system, the design becomes easier to read and viewers' confusion drops instantly.">
                             กริดไม่ใช่กรอบจำกัด แต่เป็นภาษากลางที่ทำให้องค์ประกอบทุกชิ้นสัมพันธ์กันอย่างมีเหตุผล เมื่อข้อความ รูปทรง และช่องว่างเดินตามระบบเดียวกัน งานออกแบบจะอ่านง่ายขึ้นและลดความสับสนของผู้ชมได้ทันที
                         </p>
                     </article>
 
                     <article id="visual-pollution" class="border-4 border-black bg-black text-white p-6 md:p-8">
                         <span class="text-xs font-mono uppercase text-[#FF3300]">Article 03 / Clarity</span>
-                        <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tight mt-3 mb-4">
+                        <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tight mt-3 mb-4" data-en="Visual Pollution: When Too Much Means the Message Disappears">
                             Visual Pollution: เมื่อความเยอะทำให้สารหายไป
                         </h2>
-                        <p class="text-gray-300 leading-relaxed">
+                        <p class="text-gray-300 leading-relaxed" data-en="Vignelli saw visual clutter as something that drains the viewer's ability to interpret meaning. Good design isn't the work that adds everything — it's the disciplined act of removing what isn't needed, so the main message is always seen first.">
                             Vignelli มองว่าความรกทางสายตาทำให้ผู้ชมเสียพลังในการแปลความหมาย งานออกแบบที่ดีจึงไม่ใช่งานที่เติมทุกอย่างได้ครบ แต่เป็นงานที่เลือกตัดสิ่งไม่จำเป็นออกอย่างมีวินัย เพื่อให้สารหลักถูกมองเห็นก่อนเสมอ
                         </p>
                     </article>
@@ -136,11 +143,54 @@
                 <p class="text-xs text-gray-500 font-mono mt-1">ARTICLE PAGE / THE DIGITAL CANON EXPO PROJECT</p>
             </div>
             <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold">
-                <a href="index.html" class="hover:text-[#FF3300] transition">หน้าแรก</a>
-                <a href="index.html#canon" class="hover:text-[#FF3300] transition">หลักการ</a>
-                <a href="index.html#poster-creator" class="hover:text-[#FF3300] transition">โปสเตอร์</a>
+                <a href="index.html" class="hover:text-[#FF3300] transition" data-en="Home">หน้าแรก</a>
+                <a href="index.html#canon" class="hover:text-[#FF3300] transition" data-en="Canon">หลักการ</a>
+                <a href="index.html#poster-creator" class="hover:text-[#FF3300] transition" data-en="Poster">โปสเตอร์</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        const ARTICLE_TITLES = {
+            th: 'บทความ Vignelli Canon | VIGNELLI EXPO',
+            en: 'Vignelli Canon Articles | VIGNELLI EXPO'
+        };
+        let currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('vignelliLang')) || 'th';
+
+        function applyLanguage(lang) {
+            currentLang = (lang === 'en') ? 'en' : 'th';
+            try { localStorage.setItem('vignelliLang', currentLang); } catch (e) {}
+
+            document.documentElement.lang = currentLang;
+            document.title = ARTICLE_TITLES[currentLang] || ARTICLE_TITLES.th;
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                if (!el.hasAttribute('data-th')) {
+                    el.setAttribute('data-th', el.innerHTML);
+                }
+                el.innerHTML = (currentLang === 'en')
+                    ? el.getAttribute('data-en')
+                    : el.getAttribute('data-th');
+            });
+
+            document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+                if (!el.hasAttribute('data-th-placeholder')) {
+                    el.setAttribute('data-th-placeholder', el.getAttribute('placeholder') || '');
+                }
+                el.setAttribute('placeholder', (currentLang === 'en')
+                    ? el.getAttribute('data-en-placeholder')
+                    : el.getAttribute('data-th-placeholder'));
+            });
+
+            const langLabel = document.getElementById('langLabel');
+            if (langLabel) langLabel.innerText = currentLang === 'th' ? 'EN' : 'TH';
+        }
+
+        function toggleLanguage() {
+            applyLanguage(currentLang === 'th' ? 'en' : 'th');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => applyLanguage(currentLang));
+    </script>
 </body>
 </html>

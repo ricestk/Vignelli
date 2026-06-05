@@ -119,18 +119,22 @@
             
             <!-- เมนูหลักบนเดสก์ท็อป -->
             <nav class="hidden md:flex items-center space-x-8 font-semibold text-sm tracking-tight">
-                <a href="#canon" class="hover:text-[#FF3300] transition">หลักการออกแบบ</a>
-                <a href="#map-section" class="hover:text-[#FF3300] transition">แผนที่รถไฟใต้ดิน</a>
-                <a href="#font-playground" class="hover:text-[#FF3300] transition">ทดลองสลับฟอนต์</a>
-                <a href="#poster-creator" class="hover:text-[#FF3300] transition">ออกแบบโปสเตอร์</a>
-                <a href="articles.html" class="hover:text-[#FF3300] transition">บทความ</a>
+                <a href="#canon" class="hover:text-[#FF3300] transition" data-en="Design Principles">หลักการออกแบบ</a>
+                <a href="#map-section" class="hover:text-[#FF3300] transition" data-en="Subway Map">แผนที่รถไฟใต้ดิน</a>
+                <a href="#font-playground" class="hover:text-[#FF3300] transition" data-en="Font Playground">ทดลองสลับฟอนต์</a>
+                <a href="#poster-creator" class="hover:text-[#FF3300] transition" data-en="Poster Creator">ออกแบบโปสเตอร์</a>
+                <a href="articles.html" class="hover:text-[#FF3300] transition" data-en="Articles">บทความ</a>
             </nav>
 
-            <!-- แผงควบคุม Grid Controller -->
-            <div class="flex items-center space-x-4">
+            <!-- แผงควบคุม Grid Controller + ปุ่มเปลี่ยนภาษา -->
+            <div class="flex items-center space-x-2">
+                <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-white text-black hover:bg-[#FF3300] hover:text-white text-xs font-bold uppercase tracking-wider py-2 px-3 border-2 border-black flex items-center gap-2 transition duration-200" aria-label="Toggle language">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langLabel">EN</span>
+                </button>
                 <button id="gridToggleBtn" class="bg-[#111111] text-white hover:bg-[#FF3300] text-xs font-bold uppercase tracking-wider py-2 px-4 border-2 border-black flex items-center gap-2 transition duration-200">
                     <i class="fa-solid fa-border-all"></i>
-                    <span>เปิดกริดช่วยมอง</span>
+                    <span data-en="Show Grid">เปิดกริดช่วยมอง</span>
                 </button>
             </div>
         </div>
@@ -145,18 +149,18 @@
                     MASSIMO<br><span class="text-[#FF3300]">VIGNELLI</span>
                 </h1>
                 <div class="w-24 h-4 bg-[#FF3300] mb-8"></div>
-                <p class="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-6">
+                <p class="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-6" data-en="&quot;If you can design one thing, you can design everything.&quot;">
                     "หากคุณออกแบบสิ่งหนึ่งได้ คุณก็ออกแบบได้ทุกสิ่ง"
                 </p>
-                <p class="text-gray-600 max-w-xl mb-8 leading-relaxed">
-                    ร่วมสัมผัสประวัติศาสตร์ การตัดทอนข้อมูลที่วุ่นวาย (Visual Pollution) 
+                <p class="text-gray-600 max-w-xl mb-8 leading-relaxed" data-en="Step into the history of design — cutting through Visual Pollution and learning how to bring order to chaos through interactive tools that will forever change the way you see graphic design.">
+                    ร่วมสัมผัสประวัติศาสตร์ การตัดทอนข้อมูลที่วุ่นวาย (Visual Pollution)
                     และเรียนรู้วิธีจัดระเบียบโครงสร้างทางความคิด ผ่านเครื่องมือโต้ตอบที่จะเปลี่ยนวิธีมองงานกราฟิกของคุณไปตลอดกาล
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#canon" class="bg-[#FF3300] text-white hover:bg-black transition font-bold py-4 px-8 border-3 border-black vignelli-shadow">
+                    <a href="#canon" class="bg-[#FF3300] text-white hover:bg-black transition font-bold py-4 px-8 border-3 border-black vignelli-shadow" data-en="Start Learning">
                         เริ่มต้นเรียนรู้
                     </a>
-                    <a href="#poster-creator" class="bg-white text-black hover:bg-black hover:text-white transition font-bold py-4 px-8 border-3 border-black">
+                    <a href="#poster-creator" class="bg-white text-black hover:bg-black hover:text-white transition font-bold py-4 px-8 border-3 border-black" data-en="Design Your Own Poster">
                         สร้างโปสเตอร์ของคุณเอง
                     </a>
                 </div>
@@ -187,11 +191,11 @@
     <section id="canon" class="py-20 bg-white border-t-4 border-b-4 border-black">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4" data-en="The 3 Pillars of Vignelli's Work <span class='text-[#FF3300]'>(THE CANON)</span>">
                     หลักการ 3 ประการในการทำงาน <span class="text-[#FF3300]">(THE CANON)</span>
                 </h2>
                 <div class="w-20 h-2 bg-black mx-auto mb-6"></div>
-                <p class="text-gray-600">
+                <p class="text-gray-600" data-en="The core principles that governed every Vignelli design — a remedy against the chaos of the design world.">
                     หัวใจหลักที่ใช้ควบคุมทุกงานดีไซน์ของ Vignelli เพื่อเอาชนะความสับสนวุ่นวายในโลกดีไซน์
                 </p>
             </div>
@@ -206,7 +210,7 @@
                         <h3 class="text-3xl font-black uppercase">Semantic</h3>
                         <i class="fa-solid fa-comment-dots text-3xl text-gray-400"></i>
                     </div>
-                    <p class="text-gray-600 text-sm">การหา "แก่นแท้และความหมาย" ของสิ่งที่เรากำลังจะสื่อสารอย่างลึกซึ้ง</p>
+                    <p class="text-gray-600 text-sm" data-en="Uncovering the essence and meaning of what we are trying to communicate.">การหา "แก่นแท้และความหมาย" ของสิ่งที่เรากำลังจะสื่อสารอย่างลึกซึ้ง</p>
                 </button>
 
                 <!-- การ์ด 2: Syntactic -->
@@ -216,7 +220,7 @@
                         <h3 class="text-3xl font-black uppercase">Syntactic</h3>
                         <i class="fa-solid fa-border-top-left text-3xl text-gray-400"></i>
                     </div>
-                    <p class="text-gray-600 text-sm">การจัดไวยากรณ์ทางภาพ การใช้ระบบ Grid และความสมดุลเชิงเรขาคณิต</p>
+                    <p class="text-gray-600 text-sm" data-en="Visual grammar — applying grid systems and geometric balance.">การจัดไวยากรณ์ทางภาพ การใช้ระบบ Grid และความสมดุลเชิงเรขาคณิต</p>
                 </button>
 
                 <!-- การ์ด 3: Pragmatic -->
@@ -226,7 +230,7 @@
                         <h3 class="text-3xl font-black uppercase">Pragmatic</h3>
                         <i class="fa-solid fa-cube text-3xl text-gray-400"></i>
                     </div>
-                    <p class="text-gray-600 text-sm">การใช้งานจริงที่ทนทาน ชัดเจน มอบประโยชน์และความเรียบง่ายสูงสุด</p>
+                    <p class="text-gray-600 text-sm" data-en="Real-world durability and clarity — maximum utility through ultimate simplicity.">การใช้งานจริงที่ทนทาน ชัดเจน มอบประโยชน์และความเรียบง่ายสูงสุด</p>
                 </button>
 
             </div>
@@ -236,19 +240,19 @@
                 <!-- รายละเอียด Semantic -->
                 <div id="canon-content-semantic" class="canon-content grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
                     <div class="lg:col-span-7">
-                        <h4 class="text-2xl font-black uppercase mb-4 text-[#FF3300]">Semantic (ความหมายและบริบท)</h4>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <h4 class="text-2xl font-black uppercase mb-4 text-[#FF3300]" data-en="Semantic (Meaning &amp; Context)">Semantic (ความหมายและบริบท)</h4>
+                        <p class="text-gray-700 leading-relaxed mb-4" data-en="Vignelli said: before sketching any form, we must first understand the &quot;core&quot; of the brand or object — who the organization is, what the audience needs to know, and the ultimate goal. Without that clarity, no design decision that follows can ever be right.">
                             Vignelli กล่าวไว้ว่า ก่อนจะลงมือสเก็ตช์หรือคิดรูปทรงใดๆ เราต้องเข้าใจก่อนว่า "หัวใจหลัก" ของแบรนด์หรือของชิ้นนั้นคืออะไร องค์กรนี้คือใคร กลุ่มเป้าหมายต้องการรู้อะไร และเป้าหมายปลายทางคืออะไร หากข้อมูลตรงนี้ไม่ชัดเจน ดีไซน์ที่เหลือจะไม่มีวันถูกต้องเลย
                         </p>
                         <div class="bg-white p-4 border-2 border-black inline-flex items-center gap-3">
-                            <span class="text-xs font-mono bg-[#FF3300] text-white py-1 px-2">โจทย์ตัวอย่าง:</span>
-                            <span class="text-sm font-semibold">"เราจะทำให้ป้ายโรงพยาบาล สื่อสารอย่างนุ่มนวลและไม่น่ากลัวได้อย่างไร?"</span>
+                            <span class="text-xs font-mono bg-[#FF3300] text-white py-1 px-2" data-en="Example Brief:">โจทย์ตัวอย่าง:</span>
+                            <span class="text-sm font-semibold" data-en="&quot;How might we make hospital signage feel gentle and unintimidating?&quot;">"เราจะทำให้ป้ายโรงพยาบาล สื่อสารอย่างนุ่มนวลและไม่น่ากลัวได้อย่างไร?"</span>
                         </div>
                     </div>
                     <div class="lg:col-span-5 flex items-center justify-center bg-white border-2 border-black p-6">
                         <div class="text-center">
                             <div class="text-6xl font-black text-[#111111] mb-2"><i class="fa-regular fa-lightbulb"></i></div>
-                            <span class="font-bold text-[#FF3300] uppercase tracking-wide">ดีไซน์ที่ตั้งต้นจาก "ปัญหาจริง"</span>
+                            <span class="font-bold text-[#FF3300] uppercase tracking-wide" data-en="Design that starts from a real problem">ดีไซน์ที่ตั้งต้นจาก "ปัญหาจริง"</span>
                         </div>
                     </div>
                 </div>
@@ -256,13 +260,13 @@
                 <!-- รายละเอียด Syntactic -->
                 <div id="canon-content-syntactic" class="canon-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
                     <div class="lg:col-span-7">
-                        <h4 class="text-2xl font-black uppercase mb-4 text-[#FF3300]">Syntactic (ระบบโครงสร้าง และ Grid)</h4>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <h4 class="text-2xl font-black uppercase mb-4 text-[#FF3300]" data-en="Syntactic (Structure &amp; Grid)">Syntactic (ระบบโครงสร้าง และ Grid)</h4>
+                        <p class="text-gray-700 leading-relaxed mb-4" data-en="The visual language and structure — chiefly the use of the <strong>Grid</strong>, which enforces consistent relationships between data, type, and images. Paired with a coherent type system and systematic spacing.">
                             คือภาษาและโครงสร้างทางภาพ โดยหลักๆ คือการเลือกใช้ **Grid (ตารางช่วยจัดแถว)** ที่เป็นตัวบังคับตำแหน่งให้ข้อมูล ตัวอักษร และรูปภาพ มีความสัมพันธ์กันอย่างมั่นคง การใช้ฟอนต์ที่สอดคล้อง และการเว้นระยะอย่างเป็นระบบระเบียบ
                         </p>
                         <!-- Interactive Grid Slider -->
                         <div class="space-y-3">
-                            <label class="text-xs font-mono uppercase block">ทดลองปรับระยะ Grid ช่องไฟในกล่องขวา:</label>
+                            <label class="text-xs font-mono uppercase block" data-en="Try adjusting the grid gap on the right:">ทดลองปรับระยะ Grid ช่องไฟในกล่องขวา:</label>
                             <input type="range" id="gridGapSlider" min="8" max="48" value="20" class="w-full accent-[#FF3300]" oninput="adjustSandboxGap(this.value)">
                         </div>
                     </div>
@@ -280,21 +284,21 @@
                 <!-- รายละเอียด Pragmatic -->
                 <div id="canon-content-pragmatic" class="canon-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
                     <div class="lg:col-span-7">
-                        <h4 class="text-2xl font-black uppercase mb-4 text-[#FF3300]">Pragmatic (ความสมเหตุสมผลและการใช้งานได้จริง)</h4>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <h4 class="text-2xl font-black uppercase mb-4 text-[#FF3300]" data-en="Pragmatic (Sense &amp; Usability)">Pragmatic (ความสมเหตุสมผลและการใช้งานได้จริง)</h4>
+                        <p class="text-gray-700 leading-relaxed mb-4" data-en="In short: &quot;the work must be usable and stand the test of time.&quot; Strip away the decorative excess so the content speaks for itself. A beautiful piece that leaves the viewer lost — or hard to read — has already failed.">
                             สั้นๆ คือ "งานต้องใช้ได้จริงและทนทานอยู่เหนือเวลา" การตัดทอนความประดับประดาฟุ่มเฟือย เพื่อเปิดทางให้เนื้อหานั้นพูดด้วยตัวเอง ถ้างานนั้นออกแบบมาสวยงาม แต่คนดูดูแล้วหลงทาง หรือตัวหนังสืออ่านยาก งานชิ้นนั้นก็ล้มเหลว
                         </p>
                         <div class="flex gap-4">
                             <div class="border-l-4 border-[#FF3300] pl-4">
-                                <span class="block text-xs font-mono uppercase text-gray-500">ผลลัพธ์</span>
-                                <span class="font-bold">เข้าถึงง่าย ชัดเจน มีสติปัญญา และสง่างาม (Elegance)</span>
+                                <span class="block text-xs font-mono uppercase text-gray-500" data-en="Outcome">ผลลัพธ์</span>
+                                <span class="font-bold" data-en="Accessible, clear, intelligent, and elegant.">เข้าถึงง่าย ชัดเจน มีสติปัญญา และสง่างาม (Elegance)</span>
                             </div>
                         </div>
                     </div>
                     <div class="lg:col-span-5 flex items-center justify-center bg-white border-2 border-black p-6">
                         <div class="text-center max-w-xs">
                             <div class="text-4xl font-bold border-2 border-black py-2 px-4 mb-3 inline-block">TIMELINESS</div>
-                            <p class="text-xs text-gray-500">"เทรนด์เปลี่ยนทุกซีซั่น แต่ความเข้าใจง่ายนั้นไร้กาลเวลา"</p>
+                            <p class="text-xs text-gray-500" data-en="&quot;Trends change every season — but clarity is timeless.&quot;">"เทรนด์เปลี่ยนทุกซีซั่น แต่ความเข้าใจง่ายนั้นไร้กาลเวลา"</p>
                         </div>
                     </div>
                 </div>
@@ -308,14 +312,14 @@
             
             <div class="lg:col-span-5">
                 <span class="text-sm font-bold uppercase tracking-widest text-[#FF3300] mb-3">CASE STUDY: NYC SUBWAY MAP (1972)</span>
-                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">
+                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6" data-en="The Clash Between<br><span class='text-[#FF3300]'>Geography and Diagram</span>">
                     การปะทะระหว่าง<br><span class="text-[#FF3300]">ภูมิศาสตร์ และ ไดอะแกรม</span>
                 </h2>
                 <div class="w-16 h-2 bg-black mb-6"></div>
-                <p class="text-gray-600 mb-6 leading-relaxed">
+                <p class="text-gray-600 mb-6 leading-relaxed" data-en="In 1972, Massimo Vignelli proposed a subway map that shook society. He chose visual clarity over true geographic coordinates!">
                     ในปี 1972 Massimo Vignelli เสนอแผนที่รถไฟใต้ดินที่สร้างความสั่นสะเทือนในสังคม เขายึดหลักความชัดเจนทางสายตามากกว่าตำแหน่งพิกัดจริงบนพื้นโลก!
                 </p>
-                <p class="text-gray-600 mb-8 leading-relaxed">
+                <p class="text-gray-600 mb-8 leading-relaxed" data-en="<strong>Take the test:</strong> Toggle the buttons below to compare the geographically accurate map with Vignelli's geometric diagram — and spot the differences!">
                     <strong>ท้าทายคุณทดสอบ:</strong> ลองสลับโหมดปุ่มด้านล่างเพื่อเปรียบเทียบระหว่างแผนที่แบบที่คำนึงถึงความจริงทางสภาพภูมิประเทศ (Geographic) กับแผนที่ที่ตัดทอนเชิงเรขาคณิต (Vignelli Diagram) เพื่อมองหาจุดต่าง!
                 </p>
 
@@ -323,11 +327,11 @@
                 <div class="flex gap-4">
                     <button id="mapGeoBtn" onclick="toggleMapMode('geographic')" class="flex-1 bg-white text-black hover:bg-gray-100 py-3 px-6 border-3 border-black font-bold uppercase text-sm transition flex items-center justify-center gap-2">
                         <i class="fa-solid fa-map-location-dot"></i>
-                        <span>แบบสมจริง (Geographic)</span>
+                        <span data-en="Realistic (Geographic)">แบบสมจริง (Geographic)</span>
                     </button>
                     <button id="mapVigBtn" onclick="toggleMapMode('vignelli')" class="flex-1 bg-[#FF3300] text-white hover:bg-black py-3 px-6 border-3 border-black font-bold uppercase text-sm transition flex items-center justify-center gap-2">
                         <i class="fa-solid fa-route"></i>
-                        <span>สไตล์ Vignelli (Diagram)</span>
+                        <span data-en="Vignelli Style (Diagram)">สไตล์ Vignelli (Diagram)</span>
                     </button>
                 </div>
 
@@ -393,7 +397,7 @@
                         <!-- สถานะ Overlay แจ้งเตือนเมื่อกดคลิกที่จุดสถานี -->
                         <div id="mapOverlayToast" class="absolute bottom-4 left-4 right-4 bg-black text-white p-3 text-xs font-mono flex justify-between items-center hidden">
                             <span id="toastText">คลิกสถานีเพื่อวิเคราะห์กระบวนการตัดทอน</span>
-                            <button onclick="closeMapToast()" class="text-red-500 hover:text-white uppercase font-bold">[ปิด]</button>
+                            <button onclick="closeMapToast()" class="text-red-500 hover:text-white uppercase font-bold" data-en="[CLOSE]">[ปิด]</button>
                         </div>
                     </div>
                 </div>
@@ -409,15 +413,15 @@
                 
                 <div class="lg:col-span-6">
                     <span class="text-sm font-bold uppercase tracking-widest text-[#FF3300] mb-3">FEW FONTS POLICY EXPERIMENT</span>
-                    <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">
+                    <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6" data-en="The <span class='text-[#FF3300]'>Few Fonts</span> Rule<br>Against Visual Pollution">
                         กฎ <span class="text-[#FF3300]">จำกัดฟอนต์</span><br>ต่อต้านมลพิษทางสายตา
                     </h2>
                     <div class="w-16 h-2 bg-[#FF3300] mb-6"></div>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Vignelli ต่อสู้กับความกระจัดกระจายและไร้ระเบียบของสิ่งพิมพ์ (Visual Pollution) 
+                    <p class="text-gray-400 mb-6 leading-relaxed" data-en="Vignelli fought the scattered, disordered look of print (Visual Pollution). He believed a professional designer needs only a handful of type families — <strong>Helvetica, Bodoni, Garamond, Futura, Century Expanded</strong> — to elevate a brand into something elegant and enduring.">
+                        Vignelli ต่อสู้กับความกระจัดกระจายและไร้ระเบียบของสิ่งพิมพ์ (Visual Pollution)
                         เขาเชื่อว่าดีไซเนอร์ระดับมืออาชีพใช้ฟอนต์เพียงไม่กี่ตระกูล เช่น **Helvetica, Bodoni, Garamond, Futura, Century Expanded** ก็สามารถเปลี่ยนระดับแบรนด์ให้หรูหราทรงคุณค่าได้แล้ว
                     </p>
-                    <p class="text-gray-400 mb-8 leading-relaxed">
+                    <p class="text-gray-400 mb-8 leading-relaxed" data-en="Try swapping the font on the right between families. Feel the difference for yourself and judge just how powerful a &quot;Vignelli-approved&quot; font really is.">
                         ลองเปลี่ยนฟอนต์ด้านขวาเป็นฟอนต์กลุ่มต่างๆ เพื่อสัมผัสอารมณ์ความต่าง และตัดสินด้วยตาคุณเองว่าฟอนต์แบบ "Vignelli Approved" ทรงพลังแค่ไหน!
                     </p>
 
@@ -440,7 +444,7 @@
                     <div class="mt-4">
                         <button onclick="changePlaygroundFont('Comic-Pollution', 'cursive')" class="w-full bg-[#111111] hover:bg-red-950 text-red-500 py-3 px-4 border border-dashed border-red-500 font-bold text-sm tracking-tight transition text-center flex items-center justify-center gap-2">
                             <i class="fa-solid fa-triangle-exclamation"></i>
-                            <span>สลับเป็นฟอนต์ "ฟรุ้งฟริ้ง" (Visual Pollution Example)</span>
+                            <span data-en="Switch to a &quot;cutesy&quot; font (Visual Pollution Example)">สลับเป็นฟอนต์ "ฟรุ้งฟริ้ง" (Visual Pollution Example)</span>
                         </button>
                     </div>
                 </div>
@@ -461,10 +465,10 @@
                             <h3 id="playgroundHeadline" class="text-5xl font-black leading-none uppercase tracking-tighter mb-4">
                                 INTELLECTUAL ELEGANCE.
                             </h3>
-                            <p id="playgroundSub" class="text-lg font-semibold text-gray-800 mb-4">
+                            <p id="playgroundSub" class="text-lg font-semibold text-gray-800 mb-4" data-en="&quot;Intellectual elegance is the discarding of visual excess.&quot;">
                                 "ความสง่างามทางสติปัญญาคือการละทิ้งความฟุ่มเฟือยของสายตา"
                             </p>
-                            <p id="playgroundBody" class="text-sm text-gray-600 leading-relaxed">
+                            <p id="playgroundBody" class="text-sm text-gray-600 leading-relaxed" data-en="Massimo Vignelli campaigned for using type with restraint and precision. Type is not a fashion accessory — it is the structural language you build to deliver value and a clear attitude to society.">
                                 Massimo Vignelli รณรงค์ให้ใช้ฟอนต์อย่างประหยัดและถูกต้อง เพราะฟอนต์ไม่ใช่เครื่องมือแฟชั่น แต่คือโครงสร้างของภาษาที่คุณสร้างขึ้นเพื่อส่งมอบคุณค่าและทัศนคติที่เที่ยงตรงสู่สังคม
                             </p>
                         </div>
@@ -491,7 +495,7 @@
                 MODERNIST POSTER CREATOR
             </h2>
             <div class="w-20 h-2 bg-[#FF3300] mx-auto mb-6"></div>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-en="Step into the role of an Italian-style designer — arrange headlines, pick a color pair and a limited font palette, and print your own masterpiece poster.">
                 สวมบทบาทเป็นดีไซเนอร์สไตล์อิตาลี จัดเรียงหัวข้อ เลือกคู่สี และฟอนต์จำกัด เพื่อพิมพ์โปสเตอร์ชิ้นเอกของคุณเอง
             </p>
         </div>
@@ -503,28 +507,28 @@
                 <div>
                     <h3 class="text-xl font-black uppercase mb-6 pb-2 border-b-2 border-black flex items-center gap-2">
                         <i class="fa-solid fa-sliders"></i>
-                        <span>แผงควบคุมโปสเตอร์</span>
+                        <span data-en="Poster Control Panel">แผงควบคุมโปสเตอร์</span>
                     </h3>
 
                     <!-- ใส่ข้อความ -->
                     <div class="space-y-4 mb-6">
                         <div>
-                            <label class="block text-xs font-mono uppercase font-bold mb-2">1. ข้อความพาดหัว (HEADLINE)</label>
-                            <input type="text" id="postHeadInp" value="MODERNISM" onkeyup="updatePosterLive()" class="w-full bg-gray-50 border-2 border-black p-3 font-semibold uppercase focus:bg-white focus:outline-none focus:border-[#FF3300]" placeholder="ใส่หัวข้อโปสเตอร์">
+                            <label class="block text-xs font-mono uppercase font-bold mb-2" data-en="1. Headline">1. ข้อความพาดหัว (HEADLINE)</label>
+                            <input type="text" id="postHeadInp" value="MODERNISM" onkeyup="updatePosterLive()" class="w-full bg-gray-50 border-2 border-black p-3 font-semibold uppercase focus:bg-white focus:outline-none focus:border-[#FF3300]" placeholder="ใส่หัวข้อโปสเตอร์" data-en-placeholder="Enter poster headline">
                         </div>
                         <div>
-                            <label class="block text-xs font-mono uppercase font-bold mb-2">2. คำโปรย (SUBTITLE)</label>
-                            <input type="text" id="postSubInp" value="DESIGN IS ONE AND THE SAME THING" onkeyup="updatePosterLive()" class="w-full bg-gray-50 border-2 border-black p-3 font-semibold focus:bg-white focus:outline-none focus:border-[#FF3300]" placeholder="ใส่คำอธิบายสั้นๆ">
+                            <label class="block text-xs font-mono uppercase font-bold mb-2" data-en="2. Subtitle">2. คำโปรย (SUBTITLE)</label>
+                            <input type="text" id="postSubInp" value="DESIGN IS ONE AND THE SAME THING" onkeyup="updatePosterLive()" class="w-full bg-gray-50 border-2 border-black p-3 font-semibold focus:bg-white focus:outline-none focus:border-[#FF3300]" placeholder="ใส่คำอธิบายสั้นๆ" data-en-placeholder="Enter a short description">
                         </div>
                         <div>
-                            <label class="block text-xs font-mono uppercase font-bold mb-2">3. สรุปแนวคิด / ปีที่จัด (YEAR/TEXT)</label>
-                            <input type="text" id="postYearInp" value="VIGNELLI ASSOCIATES - NY 1971" onkeyup="updatePosterLive()" class="w-full bg-gray-50 border-2 border-black p-3 font-semibold focus:bg-white focus:outline-none focus:border-[#FF3300]" placeholder="ระบุประวัติหรือปี">
+                            <label class="block text-xs font-mono uppercase font-bold mb-2" data-en="3. Year / Text">3. สรุปแนวคิด / ปีที่จัด (YEAR/TEXT)</label>
+                            <input type="text" id="postYearInp" value="VIGNELLI ASSOCIATES - NY 1971" onkeyup="updatePosterLive()" class="w-full bg-gray-50 border-2 border-black p-3 font-semibold focus:bg-white focus:outline-none focus:border-[#FF3300]" placeholder="ระบุประวัติหรือปี" data-en-placeholder="Enter history or year">
                         </div>
                     </div>
 
                     <!-- เลือกฟอนต์ -->
                     <div class="mb-6">
-                        <label class="block text-xs font-mono uppercase font-bold mb-2">4. เลือกฟอนต์สไตล์โมเดิร์น</label>
+                        <label class="block text-xs font-mono uppercase font-bold mb-2" data-en="4. Pick a Modernist Font">4. เลือกฟอนต์สไตล์โมเดิร์น</label>
                         <select id="postFontInp" onchange="updatePosterLive()" class="w-full bg-gray-50 border-2 border-black p-3 font-bold focus:bg-white focus:outline-none">
                             <option value="'Inter', sans-serif">Inter (Helvetica Style)</option>
                             <option value="'Bodoni Moda', serif">Bodoni Moda (Didot/Bodoni Style)</option>
@@ -535,12 +539,12 @@
 
                     <!-- เลือกสไตล์การจัดแถว (Layout) -->
                     <div class="mb-6">
-                        <label class="block text-xs font-mono uppercase font-bold mb-2">5. โครงสร้าง Grid (LAYOUT)</label>
+                        <label class="block text-xs font-mono uppercase font-bold mb-2" data-en="5. Grid Layout">5. โครงสร้าง Grid (LAYOUT)</label>
                         <div class="grid grid-cols-2 gap-2">
-                            <button onclick="setPosterLayout('center')" id="layout-center" class="layout-btn bg-[#FF3300] text-white py-2 px-3 border border-black font-semibold text-xs uppercase tracking-tight text-center">
+                            <button onclick="setPosterLayout('center')" id="layout-center" class="layout-btn bg-[#FF3300] text-white py-2 px-3 border border-black font-semibold text-xs uppercase tracking-tight text-center" data-en="Center Grid">
                                 กึ่งกลาง (Center Grid)
                             </button>
-                            <button onclick="setPosterLayout('swiss')" id="layout-swiss" class="layout-btn bg-gray-100 text-black py-2 px-3 border border-gray-300 font-semibold text-xs uppercase tracking-tight text-center">
+                            <button onclick="setPosterLayout('swiss')" id="layout-swiss" class="layout-btn bg-gray-100 text-black py-2 px-3 border border-gray-300 font-semibold text-xs uppercase tracking-tight text-center" data-en="Swiss Block (Left)">
                                 ชิดซ้ายหนา (Swiss Block)
                             </button>
                         </div>
@@ -548,15 +552,15 @@
 
                     <!-- เลือกคู่สี (Color Way) -->
                     <div class="mb-6">
-                        <label class="block text-xs font-mono uppercase font-bold mb-2">6. พาเลทสีสวิสดีไซน์</label>
+                        <label class="block text-xs font-mono uppercase font-bold mb-2" data-en="6. Swiss Design Palette">6. พาเลทสีสวิสดีไซน์</label>
                         <div class="grid grid-cols-3 gap-2">
-                            <button onclick="setPosterColor('cream-red')" class="p-2 border-2 border-black flex items-center justify-center gap-1 bg-[#F5F5F0] text-[#111111] text-xs font-bold">
+                            <button onclick="setPosterColor('cream-red')" class="p-2 border-2 border-black flex items-center justify-center gap-1 bg-[#F5F5F0] text-[#111111] text-xs font-bold" data-en="<span class='w-3 h-3 rounded-full bg-[#FF3300]'></span> Cream/Red">
                                 <span class="w-3 h-3 rounded-full bg-[#FF3300]"></span> ครีม/แดง
                             </button>
-                            <button onclick="setPosterColor('red-white')" class="p-2 border-2 border-gray-200 flex items-center justify-center gap-1 bg-[#FF3300] text-white text-xs font-bold">
+                            <button onclick="setPosterColor('red-white')" class="p-2 border-2 border-gray-200 flex items-center justify-center gap-1 bg-[#FF3300] text-white text-xs font-bold" data-en="<span class='w-3 h-3 rounded-full bg-white'></span> Red/White">
                                 <span class="w-3 h-3 rounded-full bg-white"></span> แดง/ขาว
                             </button>
-                            <button onclick="setPosterColor('black-red')" class="p-2 border-2 border-gray-200 flex items-center justify-center gap-1 bg-[#111111] text-white text-xs font-bold">
+                            <button onclick="setPosterColor('black-red')" class="p-2 border-2 border-gray-200 flex items-center justify-center gap-1 bg-[#111111] text-white text-xs font-bold" data-en="<span class='w-3 h-3 rounded-full bg-[#FF3300]'></span> Black/Red">
                                 <span class="w-3 h-3 rounded-full bg-[#FF3300]"></span> ดำ/แดงส้ม
                             </button>
                         </div>
@@ -567,9 +571,9 @@
                 <div class="mt-8 border-t-2 border-black pt-6">
                     <button onclick="renderPosterToCanvas()" class="w-full bg-black text-white hover:bg-[#FF3300] py-4 px-6 border-2 border-black font-bold uppercase transition flex items-center justify-center gap-2">
                         <i class="fa-solid fa-file-export"></i>
-                        <span>ส่งออกและแชร์ผลงาน (RENDER POSTER)</span>
+                        <span data-en="Export &amp; Share (RENDER POSTER)">ส่งออกและแชร์ผลงาน (RENDER POSTER)</span>
                     </button>
-                    <p class="text-[11px] text-gray-500 font-mono mt-2 text-center">
+                    <p class="text-[11px] text-gray-500 font-mono mt-2 text-center" data-en="The system will capture the poster from the live grid and convert it into a downloadable digital file.">
                         ระบบจะจับภาพโปสเตอร์จากระบบ Grid และแปลงเป็นไฟล์ดิจิทัลพร้อมดาวน์โหลด
                     </p>
                 </div>
@@ -614,15 +618,15 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="bg-white border-4 border-black p-8 md:p-12 vignelli-shadow">
                 <span class="text-xs font-mono uppercase text-[#FF3300] block mb-2">TEST YOUR MODERNISM KNOWLEDGE</span>
-                <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6">
+                <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight mb-6" data-en="The <span class='text-[#FF3300]'>VIGNELLI</span> Philosophy Quiz">
                     แบบทดสอบปรัชญา <span class="text-[#FF3300]">VIGNELLI</span>
                 </h2>
-                
+
                 <div id="quizContainer">
                     <!-- คำถามที่ 1 -->
                     <div id="quiz-q1" class="quiz-question-block space-y-4">
-                        <span class="text-sm font-bold bg-black text-white px-2 py-1 inline-block">คำถามข้อที่ 1 / 3:</span>
-                        <h4 class="text-xl font-bold">ประโยคใดต่อไปนี้คือคำประกาศอันเลื่องชื่อของ Massimo Vignelli ?</h4>
+                        <span class="text-sm font-bold bg-black text-white px-2 py-1 inline-block" data-en="Question 1 / 3:">คำถามข้อที่ 1 / 3:</span>
+                        <h4 class="text-xl font-bold" data-en="Which of the following is Massimo Vignelli's famous declaration?">ประโยคใดต่อไปนี้คือคำประกาศอันเลื่องชื่อของ Massimo Vignelli ?</h4>
                         
                         <div class="space-y-2 pt-2">
                             <button onclick="answerQuiz(1, true)" class="w-full text-left p-4 border-2 border-black hover:bg-[#FF3300] hover:text-white font-semibold transition text-sm flex justify-between items-center">
@@ -642,20 +646,20 @@
 
                     <!-- คำถามที่ 2 (ซ่อนไว้ก่อนเริ่ม) -->
                     <div id="quiz-q2" class="quiz-question-block hidden space-y-4">
-                        <span class="text-sm font-bold bg-black text-white px-2 py-1 inline-block">คำถามข้อที่ 2 / 3:</span>
-                        <h4 class="text-xl font-bold">อะไรคือฟังก์ชันสำคัญที่สุดในแผนที่รถไฟนิวยอร์กปี 1972 ตามกฎ Pragmatic ?</h4>
-                        
+                        <span class="text-sm font-bold bg-black text-white px-2 py-1 inline-block" data-en="Question 2 / 3:">คำถามข้อที่ 2 / 3:</span>
+                        <h4 class="text-xl font-bold" data-en="By Vignelli's Pragmatic rule, what is the most important function of the 1972 NYC subway map?">อะไรคือฟังก์ชันสำคัญที่สุดในแผนที่รถไฟนิวยอร์กปี 1972 ตามกฎ Pragmatic ?</h4>
+
                         <div class="space-y-2 pt-2">
                             <button onclick="answerQuiz(2, false)" class="w-full text-left p-4 border-2 border-black hover:bg-black hover:text-white font-semibold transition text-sm flex justify-between items-center">
-                                <span>ความถูกต้องระยะทางจากสถานีถึงสวนสาธารณะจริง</span>
+                                <span data-en="Showing accurate distances between stations and real-world parks">ความถูกต้องระยะทางจากสถานีถึงสวนสาธารณะจริง</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                             <button onclick="answerQuiz(2, true)" class="w-full text-left p-4 border-2 border-black hover:bg-[#FF3300] hover:text-white font-semibold transition text-sm flex justify-between items-center">
-                                <span>การตัดทอนความซับซ้อนของทิศทางให้คนมองง่ายและโฟกัสแค่ต้นทาง-ปลายทาง</span>
+                                <span data-en="Simplifying directional complexity so riders focus only on origin and destination">การตัดทอนความซับซ้อนของทิศทางให้คนมองง่ายและโฟกัสแค่ต้นทาง-ปลายทาง</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                             <button onclick="answerQuiz(2, false)" class="w-full text-left p-4 border-2 border-black hover:bg-black hover:text-white font-semibold transition text-sm flex justify-between items-center">
-                                <span>ความหลากหลายของประเภทฟอนต์ที่ใช้แยกแยะสีของโบกี้</span>
+                                <span data-en="Using many font styles to distinguish train car colors">ความหลากหลายของประเภทฟอนต์ที่ใช้แยกแยะสีของโบกี้</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -663,20 +667,20 @@
 
                     <!-- คำถามที่ 3 (ซ่อนไว้ก่อนเริ่ม) -->
                     <div id="quiz-q3" class="quiz-question-block hidden space-y-4">
-                        <span class="text-sm font-bold bg-black text-white px-2 py-1 inline-block">คำถามข้อที่ 3 / 3:</span>
-                        <h4 class="text-xl font-bold">คำว่า "Visual Pollution" ในความหมายที่ Vignelli รณรงค์แก้ไขหมายถึงข้อใด ?</h4>
-                        
+                        <span class="text-sm font-bold bg-black text-white px-2 py-1 inline-block" data-en="Question 3 / 3:">คำถามข้อที่ 3 / 3:</span>
+                        <h4 class="text-xl font-bold" data-en="What does &quot;Visual Pollution&quot; mean in Vignelli's crusade against it?">คำว่า "Visual Pollution" ในความหมายที่ Vignelli รณรงค์แก้ไขหมายถึงข้อใด ?</h4>
+
                         <div class="space-y-2 pt-2">
                             <button onclick="answerQuiz(3, false)" class="w-full text-left p-4 border-2 border-black hover:bg-black hover:text-white font-semibold transition text-sm flex justify-between items-center">
-                                <span>ขยะพลาสติกที่ตกค้างตามท้องถนนในนิวยอร์ก</span>
+                                <span data-en="Plastic litter scattered through the streets of New York">ขยะพลาสติกที่ตกค้างตามท้องถนนในนิวยอร์ก</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                             <button onclick="answerQuiz(3, false)" class="w-full text-left p-4 border-2 border-black hover:bg-black hover:text-white font-semibold transition text-sm flex justify-between items-center">
-                                <span>การใช้เครื่องเขียนและเครื่องพิมพ์ราคาแพงในอิตาลี</span>
+                                <span data-en="The use of expensive stationery and printing equipment in Italy">การใช้เครื่องเขียนและเครื่องพิมพ์ราคาแพงในอิตาลี</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                             <button onclick="answerQuiz(3, true)" class="w-full text-left p-4 border-2 border-black hover:bg-[#FF3300] hover:text-white font-semibold transition text-sm flex justify-between items-center">
-                                <span>ความวุ่นวาย ความไร้ระเบียบ และการเลือกใช้ดีไซน์ที่ฟุ่มเฟือยเกินความพอดี</span>
+                                <span data-en="Chaos, disorder, and overly decorative design choices that exceed what is needed">ความวุ่นวาย ความไร้ระเบียบ และการเลือกใช้ดีไซน์ที่ฟุ่มเฟือยเกินความพอดี</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -685,11 +689,11 @@
                     <!-- ผลลัพธ์ตอนสุดท้าย -->
                     <div id="quiz-result" class="quiz-question-block hidden text-center py-6 space-y-4">
                         <div class="text-6xl text-[#FF3300]"><i class="fa-solid fa-award"></i></div>
-                        <h4 class="text-2xl font-black uppercase">คุณผ่านการทดสอบ MODERNISM CANON!</h4>
-                        <p class="text-gray-600 max-w-md mx-auto">
+                        <h4 class="text-2xl font-black uppercase" data-en="You passed the MODERNISM CANON test!">คุณผ่านการทดสอบ MODERNISM CANON!</h4>
+                        <p class="text-gray-600 max-w-md mx-auto" data-en="You've shown a sharp grasp of Massimo Vignelli's process and ultimate goal — reducing visual complexity for a better society.">
                             คุณมีความเข้าใจในกระบวนการคิดและจุดมุ่งหมายหลักของ Massimo Vignelli อย่างยอดเยี่ยมในการลดความซับซ้อนทางสายตาเพื่อสังคมที่ดีขึ้น
                         </p>
-                        <button onclick="resetQuiz()" class="bg-black text-white hover:bg-[#FF3300] transition font-bold py-2 px-6 border-2 border-black mt-4">
+                        <button onclick="resetQuiz()" class="bg-black text-white hover:bg-[#FF3300] transition font-bold py-2 px-6 border-2 border-black mt-4" data-en="Take the quiz again">
                             ทดสอบใหม่อีกครั้ง
                         </button>
                     </div>
@@ -716,25 +720,25 @@
                     <span class="text-[10px] font-black uppercase tracking-tight text-[#FF3300]">VISITOR STATS</span>
                     <div class="h-6 w-px bg-[#FF3300]"></div>
                     <div>
-                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none">เข้าชมทั้งหมด</span>
+                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none" data-en="Total Visits">เข้าชมทั้งหมด</span>
                         <span id="totalVisitCount" class="block text-lg font-black text-white leading-none mt-1">0</span>
                     </div>
                     <div>
-                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none">เดือนนี้</span>
+                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none" data-en="This Month">เดือนนี้</span>
                         <span id="monthlyVisitCount" class="block text-lg font-black text-[#FF3300] leading-none mt-1">0</span>
                         <span id="monthlyVisitLabel" class="hidden">THIS MONTH</span>
                     </div>
                     <div>
-                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none">ไม่ซ้ำ</span>
+                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none" data-en="Unique">ไม่ซ้ำ</span>
                         <span id="uniqueVisitorCount" class="block text-lg font-black text-white leading-none mt-1">0</span>
                     </div>
                 </div>
                 <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold">
-                    <a href="#canon" class="hover:text-[#FF3300] transition">หลักการ</a>
-                    <a href="#map-section" class="hover:text-[#FF3300] transition">แผนที่รถไฟ</a>
-                    <a href="#font-playground" class="hover:text-[#FF3300] transition">สลับฟอนต์</a>
-                    <a href="#poster-creator" class="hover:text-[#FF3300] transition">เครื่องมือผลิตโปสเตอร์</a>
-                    <a href="articles.html" class="hover:text-[#FF3300] transition">บทความ</a>
+                    <a href="#canon" class="hover:text-[#FF3300] transition" data-en="Canon">หลักการ</a>
+                    <a href="#map-section" class="hover:text-[#FF3300] transition" data-en="Map">แผนที่รถไฟ</a>
+                    <a href="#font-playground" class="hover:text-[#FF3300] transition" data-en="Fonts">สลับฟอนต์</a>
+                    <a href="#poster-creator" class="hover:text-[#FF3300] transition" data-en="Poster Tool">เครื่องมือผลิตโปสเตอร์</a>
+                    <a href="articles.html" class="hover:text-[#FF3300] transition" data-en="Articles">บทความ</a>
                 </div>
             </div>
         </div>
@@ -743,6 +747,184 @@
     <!-- Script ควบคุมการทำงานของ Interactive ภายในไฟล์เดียวตามหลักการ Single File -->
     <script>
         // ----------------------------------------------------------------------
+        // 0. ระบบสลับภาษา TH <-> EN (i18n)
+        // ----------------------------------------------------------------------
+        const I18N = {
+            th: {
+                docTitle: 'VIGNELLI: Interactive Modernism Experience',
+                gridOn: 'เปิดกริดช่วยมอง',
+                gridOff: 'ปิดกริดช่วยมอง',
+                mapVigTitle: 'โหมดปัจจุบัน: ดีไซน์สไตล์ VIGNELLI (1972)',
+                mapVigDesc: 'เส้นสายถูกจำกัดทิศทางเพียงแค่องศา 45 และ 90 เท่านั้น เพื่อความสะอาดตาสูงสุด แม่น้ำถูกจำกัดรูปทรงให้ตรงและเข้ากับทิศทางสถานี เป็นการให้ความสำคัญกับความง่ายของการสื่อสารเหนือสิ่งอื่นใด',
+                mapVigBadge: 'VIGNELLI ACTIVE',
+                mapGeoTitle: 'โหมดปัจจุบัน: พิกัดภูมิศาสตร์ตามจริง (GEOGRAPHIC)',
+                mapGeoDesc: 'เส้นทางเดินรถและตลิ่งแม่น้ำจะโค้งขดเคี้ยวตามความเป็นจริงในธรรมชาตินิวยอร์ก แม้จะใกล้เคียงพิกัดบนบกแต่ทำให้ภาพดูอึดอัด ค้นหาจุด Interchange และระบุสายขบวนที่เชื่อมต่อได้ช้าลง',
+                mapGeoBadge: 'GEOGRAPHIC MAP ( messy )',
+                toastIdle: 'คลิกสถานีเพื่อวิเคราะห์กระบวนการตัดทอน',
+                toastTimes: 'สถานีศูนย์รวม: จุดเชื่อมโยง Grid เส้นตัดไขว้ที่ Vignelli ใช้จัดระเบียบข้อมูลสี่สี',
+                toastCentral: 'เขตเมืองสีเขียว: ตัดทอนความซับซ้อนให้แสดงผลเป็นเพียงสี่เหลี่ยมสีสันสวยงาม',
+                toastBrooklyn: 'ข้ามฟากแม่น้ำ: ปล่อยให้ระบบป้ายนำทาง Helvetica เคลียร์ข้อมูลสับสนของผู้เดินทาง',
+                fontPollutionLabel: 'CURRENT: VISUAL POLLUTION (COMIC SANS!)',
+                fontPollutionHeadline: 'chaos is everywhere.',
+                fontPollutionSub: 'ความสง่างามหายไปเมื่อเราใช้องค์ประกอบที่ไร้วินัย',
+                fontDefaultHeadline: 'INTELLECTUAL ELEGANCE.',
+                fontDefaultSub: '"ความสง่างามทางสติปัญญาคือการละทิ้งความฟุ่มเฟือยของสายตา"',
+                posterDefaultHead: 'MODERNISM',
+                posterDefaultSub: 'DESIGN IS ONE',
+                posterDefaultYear: '1971',
+                quizCorrect: 'ถูกต้องยอดเยี่ยม! สมราคาเป็นนักคิด Modernism',
+                quizWrong: 'ยังไม่ถูกต้องนัก ลองเลือกพิจารณาถึงความเรียบง่ายดูสิ!',
+                quizNext: 'ข้อถัดไป',
+                quizRetry: 'ลองตอบใหม่',
+                monthLabelSuffix: 'THIS MONTH',
+                numberLocale: 'th-TH'
+            },
+            en: {
+                docTitle: 'VIGNELLI: Interactive Modernism Experience',
+                gridOn: 'Show Grid',
+                gridOff: 'Hide Grid',
+                mapVigTitle: 'Current mode: VIGNELLI DESIGN (1972)',
+                mapVigDesc: 'Lines are restricted to 45° and 90° angles for ultimate visual clarity. Even the river is straightened to align with the station grid — prioritising ease of communication above all else.',
+                mapVigBadge: 'VIGNELLI ACTIVE',
+                mapGeoTitle: 'Current mode: TRUE GEOGRAPHIC COORDINATES',
+                mapGeoDesc: 'Train routes and riverbanks curve to match real-world New York geography. Coordinates are accurate, but the picture feels cramped — interchanges and connecting lines take longer to locate.',
+                mapGeoBadge: 'GEOGRAPHIC MAP ( messy )',
+                toastIdle: 'Click a station to study its reductive design',
+                toastTimes: 'Central interchange: the grid intersection Vignelli used to organise four-color data.',
+                toastCentral: 'Green urban zone: complexity is reduced to nothing more than a beautifully colored rectangle.',
+                toastBrooklyn: 'Across the river: Helvetica signage clears up the confusion for travelers.',
+                fontPollutionLabel: 'CURRENT: VISUAL POLLUTION (COMIC SANS!)',
+                fontPollutionHeadline: 'chaos is everywhere.',
+                fontPollutionSub: 'Elegance disappears the moment we use undisciplined elements.',
+                fontDefaultHeadline: 'INTELLECTUAL ELEGANCE.',
+                fontDefaultSub: '"Intellectual elegance is the discarding of visual excess."',
+                posterDefaultHead: 'MODERNISM',
+                posterDefaultSub: 'DESIGN IS ONE',
+                posterDefaultYear: '1971',
+                quizCorrect: 'Excellent — a true Modernist thinker!',
+                quizWrong: 'Not quite. Try reconsidering with simplicity in mind.',
+                quizNext: 'Next Question',
+                quizRetry: 'Try Again',
+                monthLabelSuffix: 'THIS MONTH',
+                numberLocale: 'en-US'
+            }
+        };
+
+        // ค่าเริ่มต้น/อ่านจาก localStorage
+        let currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('vignelliLang')) || 'th';
+
+        function t(key) {
+            return (I18N[currentLang] && I18N[currentLang][key]) || I18N.th[key] || '';
+        }
+
+        function applyLanguage(lang) {
+            currentLang = (lang === 'en') ? 'en' : 'th';
+            try { localStorage.setItem('vignelliLang', currentLang); } catch (e) {}
+
+            // อัปเดต <html lang> + title
+            document.documentElement.lang = currentLang;
+            if (document.title) document.title = t('docTitle');
+
+            // สลับ static text ที่มี data-en (เก็บฉบับ TH ใน data-th ครั้งแรก)
+            document.querySelectorAll('[data-en]').forEach(el => {
+                if (!el.hasAttribute('data-th')) {
+                    el.setAttribute('data-th', el.innerHTML);
+                }
+                el.innerHTML = (currentLang === 'en')
+                    ? el.getAttribute('data-en')
+                    : el.getAttribute('data-th');
+            });
+
+            // สลับ placeholder ของ input
+            document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+                if (!el.hasAttribute('data-th-placeholder')) {
+                    el.setAttribute('data-th-placeholder', el.getAttribute('placeholder') || '');
+                }
+                el.setAttribute('placeholder', (currentLang === 'en')
+                    ? el.getAttribute('data-en-placeholder')
+                    : el.getAttribute('data-th-placeholder'));
+            });
+
+            // อัปเดตปุ่ม label (แสดงภาษาที่จะสลับไป)
+            const langLabel = document.getElementById('langLabel');
+            if (langLabel) langLabel.innerText = currentLang === 'th' ? 'EN' : 'TH';
+
+            // เรียก hook ส่วนต่างๆ ให้รีเฟรชข้อความ dynamic
+            refreshDynamicTexts();
+        }
+
+        function toggleLanguage() {
+            applyLanguage(currentLang === 'th' ? 'en' : 'th');
+        }
+
+        // อัปเดตข้อความที่ JS เขียนทับเองอยู่บ่อยๆ ให้ตรงกับภาษาปัจจุบัน
+        function refreshDynamicTexts() {
+            // Grid toggle button
+            const gridBtn = document.getElementById('gridToggleBtn');
+            if (gridBtn) {
+                const span = gridBtn.querySelector('span');
+                if (span) span.innerText = isGridActive ? t('gridOff') : t('gridOn');
+            }
+
+            // Map info box (ตามโหมดปัจจุบัน)
+            const mapStatusBadge = document.getElementById('mapStatusBadge');
+            const mapInfoTitle = document.getElementById('mapInfoTitle');
+            const mapInfoDesc = document.getElementById('mapInfoDesc');
+            if (mapStatusBadge && mapInfoTitle && mapInfoDesc) {
+                if (currentMapMode === 'geographic') {
+                    mapStatusBadge.innerText = t('mapGeoBadge');
+                    mapInfoTitle.innerText = t('mapGeoTitle');
+                    mapInfoDesc.innerText = t('mapGeoDesc');
+                } else {
+                    mapStatusBadge.innerText = t('mapVigBadge');
+                    mapInfoTitle.innerText = t('mapVigTitle');
+                    mapInfoDesc.innerText = t('mapVigDesc');
+                }
+            }
+
+            // Toast text default
+            const toastText = document.getElementById('toastText');
+            const toast = document.getElementById('mapOverlayToast');
+            if (toastText && toast && toast.classList.contains('hidden')) {
+                toastText.innerText = t('toastIdle');
+            } else if (toastText && currentToastKey) {
+                toastText.innerText = t(currentToastKey);
+            }
+
+            // Font playground label/preview
+            const currentLabel = document.getElementById('currentFontLabel');
+            const headline = document.getElementById('playgroundHeadline');
+            const subtitle = document.getElementById('playgroundSub');
+            if (currentLabel && headline && subtitle) {
+                if (currentFontKey === 'pollution') {
+                    currentLabel.innerText = t('fontPollutionLabel');
+                    headline.innerText = t('fontPollutionHeadline');
+                    subtitle.innerText = t('fontPollutionSub');
+                } else if (currentFontKey) {
+                    currentLabel.innerText = `CURRENT: ${currentFontCategory.toUpperCase()} (${currentFontName.toUpperCase()})`;
+                    headline.innerText = t('fontDefaultHeadline');
+                    subtitle.innerText = t('fontDefaultSub');
+                }
+            }
+
+            // Quiz feedback (ถ้าเปิดอยู่)
+            const feedbackText = document.getElementById('quizFeedbackText');
+            const nextBtn = document.getElementById('quizNextBtn');
+            if (feedbackText && nextBtn && lastQuizAnswerCorrect !== null) {
+                if (lastQuizAnswerCorrect) {
+                    feedbackText.innerText = t('quizCorrect');
+                    nextBtn.innerText = t('quizNext');
+                } else {
+                    feedbackText.innerText = t('quizWrong');
+                    nextBtn.innerText = t('quizRetry');
+                }
+            }
+
+            // Visitor stats เลขเป็น locale ที่เหมาะสม
+            updateVisitorStatsDisplay();
+        }
+
+        // ----------------------------------------------------------------------
         // 1. ระบบ GLOBAL GRID OVERLAY
         // ----------------------------------------------------------------------
         const gridToggleBtn = document.getElementById('gridToggleBtn');
@@ -750,25 +932,26 @@
         const posterGridIndicators = document.querySelectorAll('.poster-grid-indicator');
         let isGridActive = false;
 
+        function renderGridButton() {
+            const iconClass = isGridActive ? 'fa-border-none' : 'fa-border-all';
+            const label = isGridActive ? t('gridOff') : t('gridOn');
+            gridToggleBtn.innerHTML = `<i class="fa-solid ${iconClass}"></i> <span>${label}</span>`;
+        }
+
         gridToggleBtn.addEventListener('click', () => {
             isGridActive = !isGridActive;
             if (isGridActive) {
                 globalGridOverlay.classList.remove('hidden');
-                gridToggleBtn.innerHTML = '<i class="fa-solid fa-border-none"></i> <span>ปิดกริดช่วยมอง</span>';
                 gridToggleBtn.classList.remove('bg-[#111111]');
                 gridToggleBtn.classList.add('bg-[#FF3300]');
-                
-                // เปิดกริดในโปสเตอร์แบบ Live
                 posterGridIndicators.forEach(ind => ind.classList.remove('hidden'));
             } else {
                 globalGridOverlay.classList.add('hidden');
-                gridToggleBtn.innerHTML = '<i class="fa-solid fa-border-all"></i> <span>เปิดกริดช่วยมอง</span>';
                 gridToggleBtn.classList.add('bg-[#111111]');
                 gridToggleBtn.classList.remove('bg-[#FF3300]');
-                
-                // ปิดกริดในโปสเตอร์แบบ Live
                 posterGridIndicators.forEach(ind => ind.classList.add('hidden'));
             }
+            renderGridButton();
         });
 
         // ----------------------------------------------------------------------
@@ -814,7 +997,9 @@
         // ----------------------------------------------------------------------
         // 3. แผนที่รถไฟจำลองนิวยอร์ก INTERACTIVE MAP (GEOGRAPHIC vs VIGNELLI)
         // ----------------------------------------------------------------------
+        let currentMapMode = 'vignelli';
         function toggleMapMode(mode) {
+            currentMapMode = (mode === 'geographic') ? 'geographic' : 'vignelli';
             const mapStatusBadge = document.getElementById('mapStatusBadge');
             const mapInfoTitle = document.getElementById('mapInfoTitle');
             const mapInfoDesc = document.getElementById('mapInfoDesc');
@@ -841,7 +1026,7 @@
 
             if (mode === 'vignelli') {
                 // สลับป้ายบอกสถานะ
-                mapStatusBadge.innerText = "VIGNELLI ACTIVE";
+                mapStatusBadge.innerText = t('mapVigBadge');
                 mapStatusBadge.classList.add('text-[#FF3300]');
                 mapStatusBadge.classList.remove('text-blue-500');
 
@@ -852,8 +1037,8 @@
                 btnGeo.classList.add('bg-white', 'text-black');
 
                 // เปลี่ยนคำอธิบายใน Info Box
-                mapInfoTitle.innerText = "โหมดปัจจุบัน: ดีไซน์สไตล์ VIGNELLI (1972)";
-                mapInfoDesc.innerText = "เส้นสายถูกจำกัดทิศทางเพียงแค่องศา 45 และ 90 เท่านั้น เพื่อความสะอาดตาสูงสุด แม่น้ำถูกจำกัดรูปทรงให้ตรงและเข้ากับทิศทางสถานี เป็นการให้ความสำคัญกับความง่ายของการสื่อสารเหนือสิ่งอื่นใด";
+                mapInfoTitle.innerText = t('mapVigTitle');
+                mapInfoDesc.innerText = t('mapVigDesc');
 
                 // ปรับเส้นทาง SVG ให้เป๊ะแบบ Grid คมสวยงาม
                 hudsonRiver.setAttribute('d', 'M 120,0 L 120,150 L 180,240 L 180,400');
@@ -878,7 +1063,7 @@
 
             } else {
                 // สลับป้ายบอกสถานะเป็นแบบจริงภูมิศาสตร์
-                mapStatusBadge.innerText = "GEOGRAPHIC MAP ( messy )";
+                mapStatusBadge.innerText = t('mapGeoBadge');
                 mapStatusBadge.classList.remove('text-[#FF3300]');
                 mapStatusBadge.classList.add('text-blue-500');
 
@@ -889,8 +1074,8 @@
                 btnVig.classList.add('bg-white', 'text-black');
 
                 // เปลี่ยนคำอธิบายใน Info Box
-                mapInfoTitle.innerText = "โหมดปัจจุบัน: พิกัดภูมิศาสตร์ตามจริง (GEOGRAPHIC)";
-                mapInfoDesc.innerText = "เส้นทางเดินรถและตลิ่งแม่น้ำจะโค้งขดเคี้ยวตามความเป็นจริงในธรรมชาตินิวยอร์ก แม้จะใกล้เคียงพิกัดบนบกแต่ทำให้ภาพดูอึดอัด ค้นหาจุด Interchange และระบุสายขบวนที่เชื่อมต่อได้ช้าลง";
+                mapInfoTitle.innerText = t('mapGeoTitle');
+                mapInfoDesc.innerText = t('mapGeoDesc');
 
                 // ปรับเส้นทาง SVG ให้ขดเคี้ยวตามธรรมชาติจริง
                 hudsonRiver.setAttribute('d', 'M 100,0 C 130,100 80,200 150,250 C 180,280 140,350 160,400');
@@ -916,31 +1101,37 @@
         }
 
         // แสดงรายละเอียดเมื่อคลิกสถานีบนแผนที่รถไฟ
+        let currentToastKey = null;
         function showStationDetail(stationKey) {
             const toast = document.getElementById('mapOverlayToast');
             const toastText = document.getElementById('toastText');
-            
-            let desc = "";
-            if (stationKey === 'times-square') {
-                desc = "สถานีศูนย์รวม: จุดเชื่อมโยง Grid เส้นตัดไขว้ที่ Vignelli ใช้จัดระเบียบข้อมูลสี่สี";
-            } else if (stationKey === 'central-park') {
-                desc = "เขตเมืองสีเขียว: ตัดทอนความซับซ้อนให้แสดงผลเป็นเพียงสี่เหลี่ยมสีสันสวยงาม";
-            } else if (stationKey === 'brooklyn-bridge') {
-                desc = "ข้ามฟากแม่น้ำ: ปล่อยให้ระบบป้ายนำทาง Helvetica เคลียร์ข้อมูลสับสนของผู้เดินทาง";
-            }
 
-            toastText.innerText = desc;
+            if (stationKey === 'times-square') currentToastKey = 'toastTimes';
+            else if (stationKey === 'central-park') currentToastKey = 'toastCentral';
+            else if (stationKey === 'brooklyn-bridge') currentToastKey = 'toastBrooklyn';
+            else currentToastKey = 'toastIdle';
+
+            toastText.innerText = t(currentToastKey);
             toast.classList.remove('hidden');
         }
 
         function closeMapToast() {
             document.getElementById('mapOverlayToast').classList.add('hidden');
+            currentToastKey = null;
+            const toastText = document.getElementById('toastText');
+            if (toastText) toastText.innerText = t('toastIdle');
         }
 
         // ----------------------------------------------------------------------
         // 4. แผงคีย์เวิร์ดควบคุมฟอนต์ (FONTS PLAYGROUND SIMULATOR)
         // ----------------------------------------------------------------------
+        let currentFontKey = 'default';
+        let currentFontName = 'Inter';
+        let currentFontCategory = 'sans-serif';
         function changePlaygroundFont(fontName, category, clickedBtn) {
+            currentFontName = fontName;
+            currentFontCategory = category;
+            currentFontKey = (fontName === 'Comic-Pollution') ? 'pollution' : 'default';
             const container = document.getElementById('playgroundTextContainer');
             const currentLabel = document.getElementById('currentFontLabel');
             const headline = document.getElementById('playgroundHeadline');
@@ -967,16 +1158,16 @@
             // ตรวจสอบและตั้งค่าฟอนต์
             if (fontName === 'Comic-Pollution') {
                 container.style.fontFamily = "'Comic Sans MS', 'Chalkboard SE', cursive";
-                currentLabel.innerText = "CURRENT: VISUAL POLLUTION (COMIC SANS!)";
+                currentLabel.innerText = t('fontPollutionLabel');
                 currentLabel.classList.add('text-red-500');
-                headline.innerText = "chaos is everywhere.";
-                subtitle.innerText = "ความสง่างามหายไปเมื่อเราใช้องค์ประกอบที่ไร้วินัย";
+                headline.innerText = t('fontPollutionHeadline');
+                subtitle.innerText = t('fontPollutionSub');
             } else {
                 container.style.fontFamily = `'${fontName}', sans-serif`;
                 currentLabel.innerText = `CURRENT: ${category.toUpperCase()} (${fontName.toUpperCase()})`;
                 currentLabel.classList.remove('text-red-500');
-                headline.innerText = "INTELLECTUAL ELEGANCE.";
-                subtitle.innerText = '"ความสง่างามทางสติปัญญาคือการละทิ้งความฟุ่มเฟือยของสายตา"';
+                headline.innerText = t('fontDefaultHeadline');
+                subtitle.innerText = t('fontDefaultSub');
             }
         }
 
@@ -997,9 +1188,9 @@
             const livePosterFrame = document.getElementById('livePosterFrame');
 
             // อัปเดตเนื้อหาข้อความในโปสเตอร์
-            postHeadline.innerText = headVal ? headVal : "MODERNISM";
-            postSubtitle.innerText = subVal ? subVal : "DESIGN IS ONE";
-            postYear.innerText = yearVal ? yearVal : "1971";
+            postHeadline.innerText = headVal ? headVal : t('posterDefaultHead');
+            postSubtitle.innerText = subVal ? subVal : t('posterDefaultSub');
+            postYear.innerText = yearVal ? yearVal : t('posterDefaultYear');
 
             // อัปเดตฟอนต์ครอบคลุม
             livePosterFrame.style.fontFamily = fontVal;
@@ -1163,21 +1354,23 @@
         let currentQuizIndex = 1;
         const totalQuizQuestions = 3;
 
+        let lastQuizAnswerCorrect = null;
         function answerQuiz(questionNum, isCorrect) {
             const feedbackBox = document.getElementById('quizFeedbackBox');
             const feedbackText = document.getElementById('quizFeedbackText');
             const nextBtn = document.getElementById('quizNextBtn');
 
             feedbackBox.classList.remove('hidden');
+            lastQuizAnswerCorrect = !!isCorrect;
 
             if (isCorrect) {
-                feedbackText.innerText = "ถูกต้องยอดเยี่ยม! สมราคาเป็นนักคิด Modernism";
+                feedbackText.innerText = t('quizCorrect');
                 feedbackText.className = "text-green-600 font-semibold";
-                nextBtn.innerText = "ข้อถัดไป";
+                nextBtn.innerText = t('quizNext');
             } else {
-                feedbackText.innerText = "ยังไม่ถูกต้องนัก ลองเลือกพิจารณาถึงความเรียบง่ายดูสิ!";
+                feedbackText.innerText = t('quizWrong');
                 feedbackText.className = "text-red-500 font-semibold";
-                nextBtn.innerText = "ลองตอบใหม่";
+                nextBtn.innerText = t('quizRetry');
             }
         }
 
@@ -1212,13 +1405,7 @@
         }
 
         function updateVisitorStats() {
-            const totalEl = document.getElementById('totalVisitCount');
-            const monthlyEl = document.getElementById('monthlyVisitCount');
-            const monthlyLabel = document.getElementById('monthlyVisitLabel');
-            const uniqueEl = document.getElementById('uniqueVisitorCount');
-
-            if (!totalEl || !monthlyEl || !monthlyLabel || !uniqueEl) return;
-
+            // เพิ่มจำนวนการเข้าชมครั้งเดียวต่อการโหลดเพจ จากนั้นค่อย render
             const now = new Date();
             const monthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
             const storedMonthKey = localStorage.getItem('vignelliStatsMonthKey');
@@ -1244,16 +1431,33 @@
             localStorage.setItem('vignelliStatsMonthlyVisits', String(monthlyVisits));
             localStorage.setItem('vignelliStatsUniqueVisitors', String(uniqueVisitors));
 
-            totalEl.innerText = totalVisits.toLocaleString('th-TH');
-            monthlyEl.innerText = monthlyVisits.toLocaleString('th-TH');
-            uniqueEl.innerText = uniqueVisitors.toLocaleString('th-TH');
-            monthlyLabel.innerText = `${monthKey} / THIS MONTH`;
+            updateVisitorStatsDisplay();
+        }
+
+        function updateVisitorStatsDisplay() {
+            const totalEl = document.getElementById('totalVisitCount');
+            const monthlyEl = document.getElementById('monthlyVisitCount');
+            const monthlyLabel = document.getElementById('monthlyVisitLabel');
+            const uniqueEl = document.getElementById('uniqueVisitorCount');
+            if (!totalEl || !monthlyEl || !monthlyLabel || !uniqueEl) return;
+
+            const totalVisits = parseInt(localStorage.getItem('vignelliStatsTotalVisits') || '0', 10);
+            const monthlyVisits = parseInt(localStorage.getItem('vignelliStatsMonthlyVisits') || '0', 10);
+            const uniqueVisitors = parseInt(localStorage.getItem('vignelliStatsUniqueVisitors') || '0', 10);
+            const monthKey = localStorage.getItem('vignelliStatsMonthKey') || '';
+            const locale = t('numberLocale');
+
+            totalEl.innerText = totalVisits.toLocaleString(locale);
+            monthlyEl.innerText = monthlyVisits.toLocaleString(locale);
+            uniqueEl.innerText = uniqueVisitors.toLocaleString(locale);
+            monthlyLabel.innerText = `${monthKey} / ${t('monthLabelSuffix')}`;
         }
 
         // รันอัปเดตโปสเตอร์ Live ครั้งแรกตอนโหลดเสร็จ
         window.onload = function() {
             updatePosterLive();
             updateVisitorStats();
+            applyLanguage(currentLang);
         }
     </script>
 </body>
