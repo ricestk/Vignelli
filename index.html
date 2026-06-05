@@ -716,23 +716,6 @@
                     <span class="text-xl font-black uppercase tracking-tighter">MASSIMO <span class="text-[#FF3300]">VIGNELLI</span></span>
                     <p class="text-xs text-gray-500 font-mono mt-1">THE DIGITAL CANON EXPO PROJECT &copy; 2026. ALL RIGHTS RESERVED.</p>
                 </div>
-                <div class="border border-[#FF3300] px-3 py-2 flex flex-wrap items-center justify-center gap-3 text-left">
-                    <span class="text-[10px] font-black uppercase tracking-tight text-[#FF3300]">VISITOR STATS</span>
-                    <div class="h-6 w-px bg-[#FF3300]"></div>
-                    <div>
-                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none" data-en="Total Visits">เข้าชมทั้งหมด</span>
-                        <span id="totalVisitCount" class="block text-lg font-black text-white leading-none mt-1">0</span>
-                    </div>
-                    <div>
-                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none" data-en="This Month">เดือนนี้</span>
-                        <span id="monthlyVisitCount" class="block text-lg font-black text-[#FF3300] leading-none mt-1">0</span>
-                        <span id="monthlyVisitLabel" class="hidden">THIS MONTH</span>
-                    </div>
-                    <div>
-                        <span class="block text-[9px] font-mono uppercase text-gray-500 leading-none" data-en="Unique">ไม่ซ้ำ</span>
-                        <span id="uniqueVisitorCount" class="block text-lg font-black text-white leading-none mt-1">0</span>
-                    </div>
-                </div>
                 <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold">
                     <a href="#canon" class="hover:text-[#FF3300] transition" data-en="Canon">หลักการ</a>
                     <a href="#map-section" class="hover:text-[#FF3300] transition" data-en="Map">แผนที่รถไฟ</a>
@@ -920,8 +903,6 @@
                 }
             }
 
-            // Visitor stats เลขเป็น locale ที่เหมาะสม
-            updateVisitorStatsDisplay();
         }
 
         // ----------------------------------------------------------------------
@@ -1404,59 +1385,9 @@
             document.getElementById('quiz-q1').classList.remove('hidden');
         }
 
-        function updateVisitorStats() {
-            // เพิ่มจำนวนการเข้าชมครั้งเดียวต่อการโหลดเพจ จากนั้นค่อย render
-            const now = new Date();
-            const monthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-            const storedMonthKey = localStorage.getItem('vignelliStatsMonthKey');
-            let totalVisits = parseInt(localStorage.getItem('vignelliStatsTotalVisits') || '0', 10);
-            let monthlyVisits = parseInt(localStorage.getItem('vignelliStatsMonthlyVisits') || '0', 10);
-            let uniqueVisitors = parseInt(localStorage.getItem('vignelliStatsUniqueVisitors') || '0', 10);
-
-            if (storedMonthKey !== monthKey) {
-                monthlyVisits = 0;
-                localStorage.setItem('vignelliStatsMonthKey', monthKey);
-            }
-
-            if (!localStorage.getItem('vignelliStatsVisitorId')) {
-                const visitorId = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-                localStorage.setItem('vignelliStatsVisitorId', visitorId);
-                uniqueVisitors += 1;
-            }
-
-            totalVisits += 1;
-            monthlyVisits += 1;
-
-            localStorage.setItem('vignelliStatsTotalVisits', String(totalVisits));
-            localStorage.setItem('vignelliStatsMonthlyVisits', String(monthlyVisits));
-            localStorage.setItem('vignelliStatsUniqueVisitors', String(uniqueVisitors));
-
-            updateVisitorStatsDisplay();
-        }
-
-        function updateVisitorStatsDisplay() {
-            const totalEl = document.getElementById('totalVisitCount');
-            const monthlyEl = document.getElementById('monthlyVisitCount');
-            const monthlyLabel = document.getElementById('monthlyVisitLabel');
-            const uniqueEl = document.getElementById('uniqueVisitorCount');
-            if (!totalEl || !monthlyEl || !monthlyLabel || !uniqueEl) return;
-
-            const totalVisits = parseInt(localStorage.getItem('vignelliStatsTotalVisits') || '0', 10);
-            const monthlyVisits = parseInt(localStorage.getItem('vignelliStatsMonthlyVisits') || '0', 10);
-            const uniqueVisitors = parseInt(localStorage.getItem('vignelliStatsUniqueVisitors') || '0', 10);
-            const monthKey = localStorage.getItem('vignelliStatsMonthKey') || '';
-            const locale = t('numberLocale');
-
-            totalEl.innerText = totalVisits.toLocaleString(locale);
-            monthlyEl.innerText = monthlyVisits.toLocaleString(locale);
-            uniqueEl.innerText = uniqueVisitors.toLocaleString(locale);
-            monthlyLabel.innerText = `${monthKey} / ${t('monthLabelSuffix')}`;
-        }
-
         // รันอัปเดตโปสเตอร์ Live ครั้งแรกตอนโหลดเสร็จ
         window.onload = function() {
             updatePosterLive();
-            updateVisitorStats();
             applyLanguage(currentLang);
         }
     </script>
