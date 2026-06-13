@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/"/>
+    <image:image>
+      <image:loc>https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/og-image.svg</image:loc>
+      <image:title>VIGNELLI: Interactive Modernism Experience</image:title>
+      <image:caption>Digital interactive museum for Massimo Vignelli's design canon</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/articles.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/articles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/articles.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/articles.html"/>
+    <image:image>
+      <image:loc>https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/og-image.svg</image:loc>
+      <image:title>Vignelli Canon Articles</image:title>
+      <image:caption>Essays on Few Fonts Policy, Grid System, and Visual Pollution</image:caption>
+    </image:image>
   </url>
+
 </urlset>
