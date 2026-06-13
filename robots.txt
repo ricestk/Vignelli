@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vignelli-expo-git-main-laponpatmaliwan-8449s-projects.vercel.app/sitemap.xml
+Sitemap: https://vignelliforeducation.xyz/sitemap.xml
